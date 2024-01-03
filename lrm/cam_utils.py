@@ -112,9 +112,9 @@ def center_looking_at_camera_pose(camera_position: torch.Tensor, look_at: torch.
     """
     # by default, looking at the origin and world up is pos-z
     if look_at is None:
-        look_at = torch.tensor([0, 0, 0], dtype=torch.float32)
+        look_at = torch.tensor([0, 0, 0], dtype=camera_position.dtype)
     if up_world is None:
-        up_world = torch.tensor([0, 0, 1], dtype=torch.float32)
+        up_world = torch.tensor([0, 0, 1], dtype=camera_position.dtype)
     look_at = look_at.unsqueeze(0).repeat(camera_position.shape[0], 1)
     up_world = up_world.unsqueeze(0).repeat(camera_position.shape[0], 1)
 

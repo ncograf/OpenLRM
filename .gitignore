@@ -50,3 +50,6 @@ Thumbs.db
 *.swp
 *.swo
 *.~*
+
+# Ignore output files
+dumps
